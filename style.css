@@ -66,6 +66,9 @@ button:hover {
     align-items: center;
     width: 90%;
     max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
     text-align: center;
     background: var(--container-bg);
     padding: 40px;
@@ -375,4 +378,48 @@ button:hover {
     margin: 20px 0;
     border-left: 4px solid var(--neon-pink);
     text-align: left;
+}
+
+/* Custom Scrollbar for screens */
+.screen::-webkit-scrollbar {
+    width: 6px;
+}
+.screen::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.screen::-webkit-scrollbar-thumb {
+    background: var(--neon-purple);
+    border-radius: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .screen {
+        padding: 20px;
+        width: 95%;
+        max-height: 95vh;
+    }
+    .degree-options {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .game-container {
+        height: 250px;
+    }
+    .intro-icons {
+        gap: 10px;
+    }
+    .intro-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .bot-preview {
+        margin-top: 40px;
+    }
 }
